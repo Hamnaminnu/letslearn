@@ -1,0 +1,8 @@
+<h1 style="padding: 5%; padding-bottom: 0%;">Messages you were send</h1>
+<div class="row"  *ngFor='let title of titles;let i=index' >
+  <div class="column1">
+    <h1 style="padding: 50px;">{{title}} - </h1> 
+  </div>
+  <div class="column2">
+    <h1 style="padding: 50px;">{{msgs[i]}}</h1> 
+  </div><hr>

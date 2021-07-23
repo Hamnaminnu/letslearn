@@ -1,0 +1,38 @@
+<header style="position: fixed; width: 100%; top:0%"><div class="topnav">
+    <a class="active" style="float: left;" href="#">Home</a>
+    <a style="float: left;" href="#services">Services</a>
+    <a style="float: left;" href="#about">About</a>
+    <a style="float: left;" href="#contact">Contact</a>
+    <a style="float: right;" routerLink="/professorinterface">Professor Register</a>
+  </div></header>
+  <div class="container">
+    <form  (ngSubmit)="check()"  #useregister='ngForm'>
+        <h2>LOGIN HERE</h2>
+      <div class="row">
+        <div class="col-25">
+          <label for="uname">Username :</label>
+        </div>
+        <div class="col-75">
+            <input type="email" #email=ngModel [class.is-invalid]='email.invalid && email.touched' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter registered email" name="email" [(ngModel)]="uprofessor.uname">
+            <small class="text-danger" [class.d-none]="email.valid || email.touched"></small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="pass">Password : </label>
+        </div>
+        <div class="col-75">
+            <input type="password" placeholder="Enter mobile number" #password=ngModel required [class.is-invalid]='password.invalid && password.touched' name="password" minlength="10" maxlength="10" pattern="[0-9]+" [(ngModel)]="uprofessor.password">
+        <small class="text-danger" [class.d-none]="password.valid || password.touched"></small>
+        </div>
+      </div><br>
+      <div class="col-75">
+        <input type="submit" class="submit" [disabled]='useregister.form.invalid' value="Submit">
+      </div>
+    </form>
+  </div>
+  <div id="try">
+    <footer >
+        <p>©Copyright 2021 letslearn All Rights Reserved<br>
+    </footer>
+    </div>

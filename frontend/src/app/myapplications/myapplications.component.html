@@ -1,0 +1,11 @@
+<h1 style="padding: 5%; padding-bottom: 0%;">List of Registered Courses</h1>
+<div class="row"  *ngFor='let coursedata of coursedatas' >
+  <div class="column1">
+    <img [src]=[coursedata.url]>
+  </div>
+  <div class="column2">
+    <h1 style="padding: 50px;">{{coursedata.coursename}} - {{coursedata.name}} <br>
+      {{coursedata.description}}<br> Duration of {{coursedata.duration}}&nbsp; Months</h1>
+      <a class="btn" routerLink="viewmore/:{{coursedata._id}}" style="margin-left: 50px; background-color: gray;color: rgb(255, 255, 255);"><h1 style="font-size: 1em;">More</h1></a>    
+  </div><hr>
+</div>

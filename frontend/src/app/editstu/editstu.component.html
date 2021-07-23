@@ -1,0 +1,110 @@
+<div class="container">
+    <h2>Edit Profile</h2>
+    <form  (ngSubmit)="Adddata()" #useregister='ngForm'>
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Name :</label>
+        </div>
+        <div class="col-75">
+        <input type="text" required placeholder="Enter your name" disabled name="firstname" [(ngModel)]="student.name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email : </label>
+        </div>
+        <div class="col-75">
+            <input type="email" #email=ngModel [class.is-invalid]='email.invalid && email.touched' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required placeholder="Enter email" name="email" [(ngModel)]="student.email">
+            <small class="text-danger" [class.d-none]="email.valid || email.touched"></small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="gender">Gender :</label>
+        </div>
+        <div class="col-75">
+          <select  name="gender" disabled required id="gen" name="gender" [(ngModel)]="student.gender">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="number">Number : </label>
+        </div>
+        <div class="col-75">
+        <input type="text" required minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Enter mobile number" name="number1"  [(ngModel)]="student.number1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="parentname">Parent Name :</label>
+        </div>
+        <div class="col-75">
+            <input type="text" required placeholder="Enter parent name" disabled name="parentname" [(ngModel)]="student.parentname">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="parentnumber">Parent Number : </label>
+        </div>
+        <div class="col-75">
+            <input type="text" required  minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Enter parent number" name="number2" [(ngModel)]="student.number2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="address">Address : </label>
+        </div>
+        <div class="col-75">
+          <textarea name="address" placeholder="Enter your address" style="height:200px" required   [(ngModel)]="student.address"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="qualification">Qualification : </label>
+        </div>
+        <div class="col-75">
+            <select required  name="qualification" [(ngModel)]="student.qualification">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="BACHELOR'S">BACHELOR'S</option>
+                <option value="MASTERS'S">MASTERS'S</option>
+                <option value="DIPLOMA">DIPLOMA</option>
+                <option value="HIGHER SECONDARY">HIGHER SECONDARY</option>
+              </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="collegename">College Name : </label>
+        </div>
+        <div class="col-75">
+            <input type="text"  required  placeholder="Enter college name" name="collegename" [(ngModel)]="student.collegename">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="id">University id: </label>
+        </div>
+        <div class="col-75">
+            <input type="text" required  placeholder="Enter university id" name="id" [(ngModel)]="student.id">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="city">City: </label>
+        </div>
+        <div class="col-75">
+            <input type="text" placeholder="Enter city" required  name="city" [(ngModel)]="student.city"> 
+        </div>
+      </div>
+      <br>
+      <div class="col-75">
+        <input type="submit" class="submit" [disabled]='useregister.form.invalid' value="Submit">
+      </div>
+    </form>
+  </div>
+  <div>

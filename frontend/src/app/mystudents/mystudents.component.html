@@ -1,0 +1,11 @@
+<h1 style="padding: 5%; padding-bottom: 0%;">List of Registered Students - Number of Students Registered:&nbsp;&nbsp;<span class="dot">&nbsp;&nbsp;{{professor.cn}}</span></h1> 
+<div class="row"  *ngFor='let studentdata of studentdata' >
+  <div class="column1">
+    <img [src]=[studentdata.url]>
+  </div>
+  <div class="column2">
+    <h1 style="padding: 50px;">{{studentdata.name}} <br>
+      Completed {{studentdata.qualification}}<br> from {{studentdata.collegename}} , {{studentdata.city}}.<br>
+      Email Id : {{studentdata.email}}</h1>
+  </div><hr>
+</div>

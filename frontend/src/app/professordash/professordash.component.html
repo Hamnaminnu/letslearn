@@ -1,0 +1,33 @@
+<div class="profile">
+    <div class="profile-header">
+     <header style=" width: 100%;"><div class="topnav">
+         <a style="float: left; color: gray;font-size: 1em; font-family: 'Brush Script MT',' Brush Script Std',' cursive' ;"><i class='fas fa-book-reader' style='font-size:24px;padding-right: 10px;'></i>Let's Learn</a>
+         <a style="float: right; color: gray;font-size: 1em;" href="#">LOG-OUT</a>
+         <a style="float: right; color: gray;font-size: 1em;"  (click)="delete()" >DELETE ACCOUNT</a>
+         <a style="float: right; color: gray;font-size: 1em;"routerLink="editpro" [queryParams]="{ _id: userid.id}"> EDIT PROFILE</a>
+       </div></header>
+       <div class="profile-header-cover"></div>
+       <div class="profile-header-content">
+          <div class="profile-header-img">
+             <img [src]=[professor.url]>
+          </div>
+          <div class="profile-header-info">
+             <h2 class="m-t-10 m-b-5" style="   margin-top: 30px;">{{professor.name}}</h2>
+             <h2 class="m-b-10"> {{professor.email}}</h2>
+          </div>
+       </div>
+       <ul class="profile-header-tab nav nav-tabs">
+          <li class="nav-item"><a class="nav-link" data-toggle="tab"(click)="page()">PROFILE</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" routerLink="studentlist" >STUDENTS LIST</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" routerLink="mystudents" [queryParams]="{ _id: userid.id}" >REGISTERED STUDENTS</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" routerLink="studentreq" [queryParams]="{ _id: userid.id}">REQUESTED STUDENTS</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" routerLink="typemessage"  [queryParams]="{ _id: userid.id}">SEND MESSAGE</a></li>
+         </ul>
+    </div>
+ </div>
+<router-outlet></router-outlet>
+<div id="try">
+    <footer >
+        <p>©Copyright 2021 letslearn All Rights Reserved<br>
+    </footer>
+    </div>

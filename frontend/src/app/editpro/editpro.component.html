@@ -1,0 +1,87 @@
+<div class="container">
+    <form  (ngSubmit)="Adddata()" #useregister='ngForm'>
+        <h2>Edit Profile</h2>
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Name :</label>
+        </div>
+        <div class="col-75">
+        <input type="text" required placeholder="Enter your name" disabled  name="firstname" [(ngModel)]="professor.name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email : </label>
+        </div>
+        <div class="col-75">
+            <input type="email" #email=ngModel [class.is-invalid]='email.invalid && email.touched' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required placeholder="Enter email" name="email" [(ngModel)]="professor.email">
+            <small class="text-danger" [class.d-none]="email.valid || email.touched"></small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="gender">Gender :</label>
+        </div>
+        <div class="col-75">
+          <select  name="gender" required id="gen" disabled name="gender" [(ngModel)]="professor.gender">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="number">Number : </label>
+        </div>
+        <div class="col-75">
+        <input type="text" required minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Enter mobile number" name="number"  [(ngModel)]="professor.number">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="address">Address : </label>
+        </div>
+        <div class="col-75">
+          <textarea name="address" placeholder="Enter your address" style="height:200px" required   [(ngModel)]="professor.address"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="qualification">Qualification : </label>
+        </div>
+        <div class="col-75">
+            <input type="text" placeholder="Enter qualification"  required  name="qualification" [(ngModel)]="professor.qualification">
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-25">
+          <label for="coursename">Course Name : </label>
+        </div>
+        <div class="col-75">
+            <input type="text" required  placeholder="Enter course name" name="coursename" disabled  [(ngModel)]="professor.coursename">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="duration">Duration : </label>
+        </div>
+        <div class="col-75">
+            <input type="number"required   name="duration"  [(ngModel)]="professor.duration">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="description">Descrption : </label>
+        </div>
+        <div class="col-75">
+          <textarea name="description" placeholder="Enter your address" required [(ngModel)]="professor.description" style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="col-75">
+        <input type="submit" class="submit" [disabled]='useregister.form.invalid' value="Submit">
+      </div>
+    </form>
+</div>
