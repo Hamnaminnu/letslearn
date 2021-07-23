@@ -1,0 +1,135 @@
+#div1{
+    background-image: url("../../assets/images/newbg1.jpg") !important;
+    height: 100%;
+    width: 100%;
+    background-position: cover;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-color: black;
+    text-align: center;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    padding-top: 14%;
+    padding-bottom: 14%;
+    display:block;
+}
+h1{
+    font-size: 6em;
+    font-family: 'Brush Script MT',' Brush Script Std',' cursive' !important;
+    color: rgb(255, 255, 255);
+}
+h2{
+    font-size: 1.25em;
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+#div2{
+    background-color: rgb(167, 165, 165);
+    /* opacity: 0.2; */
+    color: white !important;
+    font-size: 1.5em;
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important;
+    padding: 170px;
+}
+#div2:hover{
+    background-color: rgb(202, 201, 201);
+} 
+#a2{
+    color: white !important;
+    font-size: 1.5em;
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important;
+    text-decoration: none;
+}
+#h3{
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    width: 800px;
+    text-align: center;
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important; 
+    margin-left: 25%;
+    padding-bottom: 10%;
+}
+#service{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display:block;
+    text-align: center !important;
+}
+#h4{
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    width: 600px;
+    text-align: center;
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important; 
+    margin-left: 30%;
+    padding-top: 5%;
+}
+.a2{
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important; 
+    text-decoration: none;
+    padding-right: 50px;
+}
+.a2:hover{
+    color: rgb(126, 126, 126);
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    padding-top: 10px;
+    margin-left: 0%;
+    color: rgb(0, 0, 0);
+    bottom: 0%;
+    left: 0% !important;
+  }
+.topnav {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .topnav a {
+  
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color:rgb(187, 186, 186);
+    color: black;
+  }
+  
+  .topnav a.active {
+    color: rgb(134, 134, 134);
+  }
+  #h1{
+      color: black;
+      text-align: center;
+  }
+  .column {
+    float: left;
+    width: 28%;
+    margin: 60px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  hr{
+      width: 60%;
+      margin: auto;
+  }
+  a{
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important;;
+}
+ 

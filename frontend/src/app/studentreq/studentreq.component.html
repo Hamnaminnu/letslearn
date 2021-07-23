@@ -1,0 +1,13 @@
+<h1 style="padding: 5%; padding-bottom: 0%;">List of Requested Students - Number of Students Registered:&nbsp;&nbsp;<span class="dot">&nbsp;&nbsp;{{professor.cn}}</span></h1> 
+<div class="row"  *ngFor='let studentdata of studentdata' >
+  <div class="column1">
+    <img [src]=[studentdata.url]>
+  </div>
+  <div class="column2">
+    <h1 style="padding: 50px;">{{studentdata.name}} <br>
+      Completed {{studentdata.qualification}}<br> from {{studentdata.collegename}} , {{studentdata.city}}.<br>
+      Email Id : {{studentdata.email}}</h1>
+      <button class="btn " style="margin-left: 50px; background-color: gray;color: rgb(255, 255, 255);" (click)="accept(studentdata)"><h1 style="font-size: 1em;">Accept</h1></button>
+      <button class="btn " style="margin-left: 30px; background-color: gray;color: rgb(255, 255, 255);" (click)="reject(studentdata)"><h1 style="font-size: 1em;">Reject</h1></button>
+  </div><hr>
+</div>

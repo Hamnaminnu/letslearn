@@ -1,0 +1,39 @@
+
+a{
+  font-family: 'Brush Script MT,Brush Script Std,cursive' !important;;
+}
+h1{
+  font-size: 1.25em;
+  font-family: 'Brush Script MT,Brush Script Std,cursive' !important;
+}
+
+.row {
+  display: flex;
+  margin-left: 5%;
+}
+
+hr{
+  width: 60%;
+  margin: auto;
+}
+.column1 {
+  width: 25%;
+  margin: 50px;
+  height: 300px;
+}
+.column2 {
+  width: 50%;
+  margin: 50px;
+  height: 300px; 
+}
+img{
+  height: 300px;
+  width: 250px;
+}
+.dot {
+  height: 30px;
+  width: 30px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}

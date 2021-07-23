@@ -1,0 +1,25 @@
+<div class="container">
+    <form  (ngSubmit)="Adddata()" #msg='ngForm' >
+        <h2>Send your Message </h2>
+      <div class="row">
+        <div class="col-25">
+          <label for="title">Title :</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="title" required placeholder="enter title" [(ngModel)]="messagetext.title">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="message">Message : </label>
+        </div>
+        <div class="col-75">
+            <textarea cols="40" rows="5" name="message" required placeholder="enter message or notes/reference links" [(ngModel)]="messagetext.message"></textarea>
+        </div>
+      </div>
+      <div class="col-75">
+        <input type="submit" class="submit" [disabled]='msg.form.invalid' value="Send">
+        <a  routerLink="msgview" [queryParams]="{ _id: id}" style="color: grey; text-decoration: none;"><h2>Click here to view all Messages</h2></a>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,34 @@
+h2{
+    padding: 12px;
+    font-size: 1.25em;
+    font-family: 'Brush Script MT,Brush Script Std,cursive' !important;
+  }
+  
+  label {
+    margin-left: 8%;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  
+  .container {
+    left: 0%;
+    padding-top: 5%;
+    margin-left: 5%;
+    border: 2px;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 5%;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 70%;
+    margin-top: 6px;
+  }
